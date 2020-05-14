@@ -29,7 +29,6 @@ public class ConvidadosController {
 	
 	@PostMapping("/convidados")
 	public String salvar(Convidado convidado) {
-		System.out.println(convidado);
 		this.convidados.save(convidado);
 		return "redirect:/convidados";
 	}
