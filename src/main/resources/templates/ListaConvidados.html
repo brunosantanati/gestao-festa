@@ -13,14 +13,27 @@
 </head>
 
 <body>
-	<h1>AlgaWorks!</h1>
-	<button type="button" class="btn btn-primary" id="btn">Primary</button>
-	
-	<script>
-		$( "#btn" ).click(function() {
-		  alert( "jQquery OK" );
-		});
-	</script>
+	<div class="panel panel-default" style="margin: 10px">
+		<div class="panel-heading">
+			<h1 class="panel-title">Lista de convidados</h1>
+		</div>
+		<div class="panel-body">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>Acompanhantes</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="convidado : ${convidados}">
+						<td th:text="${convidado.nome}"></td>
+						<td th:text="${convidado.quantidadeAcompanhantes}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </body>
 
 </html>
